@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#303030",
+              "secondary-container": "#454747",
+              "surface-dim": "#131313",
+              "surface-container-lowest": "#0e0e0e",
+              "on-error-container": "#ffdad6",
+              "surface-tint": "#4ae176",
+              "on-secondary": "#1a1c1c",
+              "inverse-primary": "#006e2f",
+              "surface-container-highest": "#353535",
+              "tertiary-fixed": "#5f5e5e",
+              "primary-container": "#5bf083",
+              "on-surface-variant": "#c6c6c6",
+              "secondary-fixed-dim": "#aaabab",
+              "surface-bright": "#393939",
+              "on-primary": "#002109",
+              "error": "#ffb4ab",
+              "on-background": "#e2e2e2",
+              "on-error": "#690005",
+              "primary-fixed-dim": "#005321",
+              "outline": "#919191",
+              "on-tertiary-fixed": "#ffffff",
+              "surface-container": "#1f1f1f",
+              "background": "#131313",
+              "on-secondary-container": "#e2e2e2",
+              "secondary": "#c6c6c7",
+              "tertiary-fixed-dim": "#474746",
+              "on-secondary-fixed": "#1a1c1c",
+              "primary": "#ffffff",
+              "inverse-surface": "#e2e2e2",
+              "secondary-fixed": "#c6c6c7",
+              "on-secondary-fixed-variant": "#3a3c3c",
+              "error-container": "#93000a",
+              "surface-container-high": "#2a2a2a",
+              "on-primary-fixed": "#ffffff",
+              "on-primary-container": "#000000",
+              "primary-fixed": "#006e2f",
+              "on-surface": "#e2e2e2",
+              "on-primary-fixed-variant": "#6bff8f",
+              "on-tertiary-container": "#000000",
+              "surface-container-low": "#1b1b1b",
+              "on-tertiary-fixed-variant": "#e5e2e1",
+              "outline-variant": "#474747",
+              "surface-variant": "#353535",
+              "tertiary": "#e5e2e1",
+              "surface": "#131313",
+              "on-tertiary": "#1c1b1b",
+              "tertiary-container": "#929090"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        .void-gradient {
+            background: radial-gradient(circle at center, #131313 0%, #000000 100%);
+        }
+        .scan-line {
+            width: 100%;
+            height: 2px;
+            background: #4ae176;
+            position: absolute;
+            top: 0;
+            box-shadow: 0 0 15px #4ae176;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black selection:bg-surface-tint selection:text-black">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full border-b border-white/10 bg-black/60 backdrop-blur-xl text-white flex items-center justify-between px-6 h-16 z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white" data-icon="shield">shield</span>
+<span class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-sm font-bold">RATAN THE ADVISOR</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white font-['Space_Grotesk'] uppercase tracking-[0.15em] text-[10px] font-bold" href="#">DASHBOARD</a>
+<a class="text-zinc-500 hover:bg-white/5 transition-colors duration-150 font-['Space_Grotesk'] uppercase tracking-[0.15em] text-[10px] font-bold" href="#">TERMINAL</a>
+<a class="text-zinc-500 hover:bg-white/5 transition-colors duration-150 font-['Space_Grotesk'] uppercase tracking-[0.15em] text-[10px] font-bold" href="#">NETWORK</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="h-2 w-2 rounded-full bg-surface-tint animate-pulse"></div>
+<span class="text-[10px] uppercase tracking-widest text-zinc-400">System Secure</span>
+</div>
+</header>
+<!-- Side Navigation (Desktop Only) -->
+<aside class="fixed left-0 h-full w-20 md:w-80 border-r border-white/5 bg-[#0e0e0e] z-40 pt-24 hidden md:flex flex-col gap-6">
+<div class="px-8 mb-4">
+<h2 class="text-surface-tint font-black font-['Space_Grotesk'] uppercase tracking-[0.15em] text-xs">SENTINEL PROTOCOL</h2>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 text-surface-tint border-l-2 border-surface-tint bg-white/5 pl-8 py-3 transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+<span class="font-['Space_Grotesk'] uppercase tracking-[0.15em] font-medium text-xs">SYSTEM STATUS</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-400 pl-8 py-3 hover:bg-zinc-900 transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+<span class="font-['Space_Grotesk'] uppercase tracking-[0.15em] font-medium text-xs">THREAT DATABASE</span>
+</a>
+<a class="flex items-center gap-4 text-zinc-400 pl-8 py-3 hover:bg-zinc-900 transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="vpn_key">vpn_key</span>
+<span class="font-['Space_Grotesk'] uppercase tracking-[0.15em] font-medium text-xs">ENCRYPTION KEYS</span>
+</a>
+</nav>
+<div class="mt-auto p-8 border-t border-white/5 bg-black/40">
+<div class="flex flex-col gap-2">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest">Core Temperature</span>
+<div class="h-1 w-full bg-zinc-800">
+<div class="h-full bg-surface-tint w-[42%]"></div>
+</div>
+<span class="text-right text-[10px] text-surface-tint">42°C</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-80 pt-24 pb-32 px-6 md:px-12 relative min-h-screen">
+<!-- Watermark Background -->
+<div class="fixed bottom-[-100px] right-[-100px] opacity-[0.03] pointer-events-none select-none z-0">
+<span class="material-symbols-outlined text-[600px]" data-icon="shield">shield</span>
+</div>
+<section class="max-w-6xl mx-auto relative z-10">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
+<div>
+<h1 class="text-white text-5xl md:text-7xl font-bold tracking-tighter uppercase mb-2">RATAN THE ADVISOR</h1>
+<p class="text-zinc-500 font-['Space_Grotesk'] uppercase tracking-[0.3em] text-xs">Autonomous Sentinel Interface / Ver 4.0.2</p>
+</div>
+<div class="bg-surface-container-low p-6 border-l-2 border-surface-tint flex flex-col gap-1">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest">Active session</span>
+<span class="text-surface-tint font-mono text-xl tracking-tighter font-bold">ROOT@NODE-7721</span>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Main Scan Status Card -->
+<div class="md:col-span-8 bg-surface-container-lowest border border-white/5 relative overflow-hidden group h-[400px]">
+<div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+<div class="p-8 h-full flex flex-col relative z-20">
+<div class="flex justify-between items-start mb-8">
+<div class="flex flex-col">
+<span class="text-[10px] text-surface-tint uppercase tracking-[0.2em] font-bold">Scanning Protocol</span>
+<h3 class="text-2xl font-bold tracking-tight uppercase text-white">DEEP INFRASTRUCTURE ANALYTICS</h3>
+</div>
+<span class="material-symbols-outlined text-surface-tint animate-spin" data-icon="progress_activity" style="font-variation-settings: 'wght' 300;">progress_activity</span>
+</div>
+<div class="flex-grow flex items-center justify-center">
+<div class="w-full h-48 border border-white/10 relative overflow-hidden bg-black/40">
+<!-- Tactical Map Visualization -->
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-screen" data-alt="Abstract green digital circuit board pattern with glowing data streams and nodes on a black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW2b5BnPu-u1ukAOgwTuHyQ-crzBDg18Ydq2ghnckg1oSA0-jznSHQNuFzr_fo0GIH03vwIS3KY7h0HiCzB7YHhf2BlnlFXU5ej8dHFGgoBGe7tYn0F39wGtiB_jlCX6jIXJQrz6zSb0ty-XkkYGIfbRWnSvdgGPutMpww89hUzcggK-n4TNfyudBws-UCuWtOVxrELpFVZY49iXrUHsV2iWsIdpPjzewSX4lvsEc0tLFodD0DGoPTNUzIVtlht_kaoYgD2RoW-CA"/>
+<div class="scan-line"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center">
+<div class="text-5xl font-black text-white tracking-widest mb-2">89.4%</div>
+<div class="text-[10px] text-zinc-500 uppercase tracking-[0.3em]">Integrity Check</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="flex-grow bg-white text-black py-4 uppercase text-xs font-black tracking-widest hover:bg-surface-tint transition-colors duration-150">
+                                INITIATE SCAN
+                            </button>
+<button class="px-6 border border-white/20 text-white hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Threat Level Module -->
+<div class="md:col-span-4 bg-surface-container-high p-8 flex flex-col justify-between border border-white/5 h-[400px]">
+<div>
+<span class="text-[10px] text-zinc-400 uppercase tracking-[0.2em] font-bold">THREAT LEVEL</span>
+<div class="mt-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="text-3xl font-black uppercase text-white">MINIMAL</span>
+<span class="material-symbols-outlined text-surface-tint text-4xl" data-icon="verified_user">verified_user</span>
+</div>
+<p class="text-xs text-zinc-500 leading-relaxed uppercase tracking-wider mt-2">No critical vulnerabilities detected within the primary firewall sector in the last 24h.</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end border-b border-white/10 pb-2">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest">Inbound Traffic</span>
+<span class="text-xs text-white font-bold">1.2 GB/S</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/10 pb-2">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest">Encrypted Streams</span>
+<span class="text-xs text-white font-bold">14,892</span>
+</div>
+<div class="flex justify-between items-end border-b border-white/10 pb-2">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest">Node Latency</span>
+<span class="text-xs text-surface-tint font-bold">12 MS</span>
+</div>
+</div>
+</div>
+<!-- Server Nodes Map -->
+<div class="md:col-span-12 bg-surface-container-lowest border border-white/5 p-8 relative min-h-[500px]">
+<div class="flex justify-between items-start mb-12">
+<div>
+<span class="text-[10px] text-surface-tint uppercase tracking-[0.2em] font-bold">Global Infrastructure</span>
+<h3 class="text-2xl font-bold tracking-tight uppercase text-white">SERVER NODE DISTRIBUTION</h3>
+</div>
+<div class="flex gap-2">
+<span class="h-2 w-2 bg-surface-tint"></span>
+<span class="h-2 w-2 bg-zinc-700"></span>
+<span class="h-2 w-2 bg-zinc-700"></span>
+</div>
+</div>
+<div class="relative w-full h-[350px] bg-black/60 border border-white/5 overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 filter grayscale contrast-125" data-alt="Digital world map made of light dots and connection lines on a dark background showing global networking hubs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPjnIgKlpKWoRwKBeqJ3ft74RdaHzCMQhm3C7XP-Q1bnKVJiKlIt5MU-1VFAUAQqTOSWDMMBHm-D1E1k39sbB55yWYwcV8FQ0jjw62xQcNF4D8ki-D4tAdhEBplcoTCMeapn8xxWmDBkN3cOv_OcmaZYEMK-c4fZ6UPP9-JZ37axGrShYMGMfCPffnbBboLo1S3aKgS4hoe-t8mUAC0cTpcmkVIeLiqKKkG0NZlpy3e8KrkIFmatX-3kXzN2Ye3s5xBNDVpH2ytjU"/>
+<!-- Tactical Overlay -->
+<div class="absolute inset-0 grid grid-cols-4 grid-rows-4 pointer-events-none">
+<div class="border-r border-b border-white/5"></div>
+<div class="border-r border-b border-white/5"></div>
+<div class="border-r border-b border-white/5"></div>
+<div class="border-b border-white/5"></div>
+<div class="border-r border-b border-white/5"></div>
+<div class="border-r border-b border-white/5"></div>
+<div class="border-r border-b border-white/5"></div>
+<div class="border-b border-white/5"></div>
+</div>
+<!-- Animated Nodes -->
+<div class="absolute top-[20%] left-[15%] flex flex-col items-center">
+<div class="h-4 w-4 rounded-full border border-surface-tint flex items-center justify-center animate-ping">
+<div class="h-1 w-1 bg-surface-tint rounded-full"></div>
+</div>
+<span class="mt-2 text-[8px] text-surface-tint bg-black/80 px-1 font-mono">NODE-NA-01</span>
+</div>
+<div class="absolute top-[60%] left-[45%] flex flex-col items-center">
+<div class="h-2 w-2 bg-surface-tint rounded-full shadow-[0_0_10px_#4ae176]"></div>
+<span class="mt-2 text-[8px] text-surface-tint bg-black/80 px-1 font-mono">NODE-EU-08</span>
+</div>
+<div class="absolute top-[40%] right-[25%] flex flex-col items-center">
+<div class="h-2 w-2 bg-surface-tint rounded-full shadow-[0_0_10px_#4ae176]"></div>
+<span class="mt-2 text-[8px] text-surface-tint bg-black/80 px-1 font-mono">NODE-AS-14</span>
+</div>
+</div>
+<div class="absolute bottom-8 right-8 flex gap-8">
+<div class="flex flex-col">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest">Uptime</span>
+<span class="text-white font-bold">99.999%</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] text-zinc-500 uppercase tracking-widest">Threat Blocks</span>
+<span class="text-white font-bold">82.4K</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-20 bg-[#0e0e0e] border-t border-white/5 z-50 flex justify-around items-center px-4 pb-safe">
+<button class="flex items-center justify-center text-zinc-600 hover:text-white transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
+</button>
+<button class="flex items-center justify-center text-surface-tint scale-110">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</button>
+<button class="flex items-center justify-center text-zinc-600 hover:text-white transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+</button>
+<button class="flex items-center justify-center text-zinc-600 hover:text-white transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+</nav>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 md:bottom-12 md:right-12 w-16 h-16 bg-surface-tint text-black flex items-center justify-center shadow-2xl z-50 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl font-bold" data-icon="add">add</span>
+</button>
+</body></html>
